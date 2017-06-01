@@ -259,15 +259,6 @@ public class UrlValidatorTest extends TestCase {
 		   System.out.println("MISMATCH");
 	   }
 	   System.out.println();
-	   
-	   testURL = "http://travel.state.gov/content/passports/en/passports.html";
-	   expected_res = true;
-	   System.out.println("URL: " + testURL);
-	   System.out.println("Result: " + urlVal.isValid(testURL) + "; Should be: " + expected_res);
-	   if(urlVal.isValid(testURL) != expected_res) {
-		   System.out.println("MISMATCH");
-	   }
-	   System.out.println();
    }
    
    // valid scheme and valid host
@@ -725,7 +716,7 @@ public class UrlValidatorTest extends TestCase {
 	   System.out.println();
    }
    
-   // URL with all parts invalid
+   // URL with all 5 parts invalid
    public void testFourteenthPartition()
    {
 	   UrlValidator urlVal = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES);
