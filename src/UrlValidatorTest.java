@@ -541,7 +541,7 @@ public class UrlValidatorTest extends TestCase {
 	   System.out.println();
    }
    
-   // URL with only a valid scheme and no other parts
+   // URL with 1 invalid part and the rest of the parts valid
    public void testNinthPartition()
    {
 	   UrlValidator urlVal = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES);
@@ -550,41 +550,6 @@ public class UrlValidatorTest extends TestCase {
 	   
 	   // First Test
 	   testURL = "http://";
-	   System.out.println("URL: " + testURL);
-	   System.out.println("Result: " + urlVal.isValid(testURL) + "; Should be: " + expected_res);
-	   if(urlVal.isValid(testURL) != expected_res) {
-		   System.out.println("MISMATCH");
-	   }
-	   System.out.println();
-	   
-	   // Second test
-	   testURL = "https://";
-	   System.out.println("URL: " + testURL);
-	   System.out.println("Result: " + urlVal.isValid(testURL) + "; Should be: " + expected_res);
-	   if(urlVal.isValid(testURL) != expected_res) {
-		   System.out.println("MISMATCH");
-	   }
-	   System.out.println();
-	   
-	   // Third test
-	   testURL = "ftp://";
-	   System.out.println("URL: " + testURL);
-	   System.out.println("Result: " + urlVal.isValid(testURL) + "; Should be: " + expected_res);
-	   if(urlVal.isValid(testURL) != expected_res) {
-		   System.out.println("MISMATCH");
-	   }
-	   System.out.println();
-   }
-   
-   // URL with 1 invalid part and the rest of the parts valid
-   public void testTenthPartition()
-   {
-	   UrlValidator urlVal = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES);
-	   String testURL;
-	   boolean expected_res = false;
-	   
-	   // First Test
-	   testURL = "http://www.free.org:port55/page.html";
 	   System.out.println("URL: " + testURL);
 	   System.out.println("Result: " + urlVal.isValid(testURL) + "; Should be: " + expected_res);
 	   if(urlVal.isValid(testURL) != expected_res) {
@@ -612,7 +577,7 @@ public class UrlValidatorTest extends TestCase {
    }
    
    // URL with 2 invalid parts and the rest of the parts valid
-   public void testEleventhPartition()
+   public void testTenthPartition()
    {
 	   UrlValidator urlVal = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES);
 	   String testURL;
@@ -647,7 +612,7 @@ public class UrlValidatorTest extends TestCase {
    }
    
    // URL with 3 invalid parts and the rest of the parts valid
-   public void testTwelfthPartition()
+   public void testEleventhPartition()
    {
 	   UrlValidator urlVal = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES);
 	   String testURL;
@@ -682,7 +647,7 @@ public class UrlValidatorTest extends TestCase {
    }
    
    // URL with 4 invalid parts and the remaining part valid
-   public void testThirteenthPartition()
+   public void testTwelfthPartition()
    {
 	   UrlValidator urlVal = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES);
 	   String testURL;
@@ -717,7 +682,7 @@ public class UrlValidatorTest extends TestCase {
    }
    
    // URL with all 5 parts invalid
-   public void testFourteenthPartition()
+   public void testThirteenthPartition()
    {
 	   UrlValidator urlVal = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES);
 	   String testURL;
