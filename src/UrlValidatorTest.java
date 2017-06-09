@@ -745,7 +745,7 @@ public class UrlValidatorTest extends TestCase {
     public void testIPAddresses() {
         boolean quiet = true;   // change this to see which test cases are incorrect
         int maxValid = 255;
-        int lowerLimit = 250;
+        int lowerLimit = 0;
         int upperLimit = 260;
         int counter1 = 0;
         int counter2 = 0;
